@@ -1,0 +1,74 @@
+LISTA DE EXERCÍCIOS: INTRODUÇÃO AO TKINTER (AULA 7)
+Conteúdo: Janelas, Widgets básicos (Label, Entry, Button), Layout com pack e Eventos.
+
+======================================================================
+NÍVEL: FÁCIL (Conceitos Básicos, Propriedades e Eventos Simples)
+======================================================================
+
+Exercício 1: Cartão de Visitas Digital
+Crie uma janela com o título "Cartão Digital" e tamanho fixado em 350x220 pixels.
+Adicione um Label principal contendo o nome de uma empresa ou loja fictícia (ex: "Tech Soluções"), com fonte Verdana tamanho 14 em negrito, texto na cor branca (fg="white") e cor de fundo azul-escuro (bg="darkblue"). Em seguida, adicione um segundo Label logo abaixo com um slogan ou telefone, usando espaçamento vertical (pady=15).
+
+Exercício 2: Gerador de Elogio Aleatório / Mensagem Inspiradora
+Desenvolva uma janela com um botão com o texto "Inspirar" e um Label logo abaixo que se inicia vazio.
+Crie uma lista de três frases motivacionais no seu código (ex: "Você é capaz!", "Tenha um ótimo dia!", "Continue praticando!"). Ao clicar no botão, selecione uma frase da lista (você pode usar a biblioteca random com random.choice) e atualize o Label usando o método .config().
+
+Exercício 3: Contador de Caracteres em Tempo Real
+Crie uma tela contendo:
+- Um campo de entrada (Entry) para digitação de texto.
+- Um botão com o texto "Contar Letras".
+- Um Label de resultado.
+Quando o usuário digitar um texto e clicar no botão, a interface deve ler o conteúdo com .get(), contar quantos caracteres foram digitados (usando a função len()) e exibir no Label: "Total de caracteres: X".
+
+Exercício 4: Inversor de Palavras (Efeito Espelho)
+Desenvolva uma janela onde o usuário digita uma palavra em um Entry. Ao clicar no botão "Inverter", o programa deve ler o texto, inverter a ordem das letras (usando fatiamento texto[::-1]) e exibir a palavra invertida em destaque num Label com texto na cor roxa (purple).
+
+Exercício 5: Limpador de Campos (Reset Completo)
+Crie uma interface contendo uma caixa de entrada (Entry), um botão "Definir Texto" e outro botão "Resetar":
+- O botão "Definir Texto" deve apenas ler o Entry e exibir a mensagem em um Label.
+- O botão "Resetar" deve apagar o texto de dentro do Entry (usando entrada.delete(0, tk.END)) e redefinir o Label para ficar vazio novamente (.config(text="")).
+
+======================================================================
+NÍVEL: MÉDIO (Lógica, Validações, Cálculos e Múltiplas Entradas)
+======================================================================
+
+Exercício 6: Calculadora de Índice de Massa Corporal (IMC)
+Crie um aplicativo para cálculo de IMC com dois campos de entrada (Entry):
+- Campo 1: Peso em kg (ex: 70.5).
+- Campo 2: Altura em metros (ex: 1.75).
+Adicione um botão "Calcular IMC" e um Label para a resposta.
+Fórmula: IMC = peso / (altura ** 2).
+Exiba o valor arredondado com duas casas decimais. Trate exceções com try/except para evitar travamentos caso o usuário deixe campos em branco ou digite letras.
+
+Exercício 7: Conversor de Moeda (Dólar para Real)
+Crie uma janela para conversão monetária:
+- Um Entry para o usuário informar a quantia em Dólares ($).
+- Um botão com o texto "Converter para R$".
+- Um Label que exibe o resultado convertido para Reais, considerando uma cotação fixa definida no código (ex: 1 USD = 5.20 BRL).
+Caso o usuário digite um valor não numérico, mostre no próprio Label uma mensagem em vermelho: "Valor digitado inválido!".
+
+Exercício 8: Simulador de Troco
+Desenvolva uma tela para operadores de caixa com dois campos:
+- Campo 1: Valor total da compra (R$).
+- Campo 2: Valor entregue pelo cliente em dinheiro (R$).
+Ao clicar no botão "Calcular Troco":
+- Se o valor pago for suficiente, calcule a diferença e mostre em verde: "Troco a devolver: R$ X.XX".
+- Se o valor pago for menor que a compra, mostre em vermelho: "Faltam R$ X.XX para completar o pagamento!".
+Use try/except para garantir que ambos os campos sejam números válidos.
+
+Exercício 9: Validador de Senha Segura
+Crie uma interface onde o usuário digita uma senha em um Entry (com show="*") e clica no botão "Avaliar Segurança".
+Regras de validação:
+- Se a senha possuir menos de 6 caracteres, exiba em vermelho: "Senha fraca (mínimo 6 dígitos)".
+- Se possuir 6 ou mais caracteres e contiver pelo menos um número (use any(c.isdigit() for c in senha)), exiba em verde: "Senha forte e válida!".
+- Caso contrário, exiba em laranja: "Senha média (adicione números para melhorar)".
+
+Exercício 10: Desafio da Tabuada Automática
+Crie uma janela com um campo Entry para o usuário digitar um número inteiro de 1 a 10.
+Ao clicar no botão "Gerar Tabuada":
+- O programa deve calcular a tabuada desse número de 1 a 5 (ou 1 a 10) e exibir o resultado formatado em um único Label com quebras de linha (\n).
+Exemplo de exibição no Label:
+5 x 1 = 5
+5 x 2 = 10
+...
+Use try/except para validar se a entrada é de fato um número inteiro válido.
