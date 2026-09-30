@@ -1,7 +1,0 @@
-Nome, Nota, Curso
-Claudiano, 1.5, TDS
-Rafaela, 8.5, TI
-Yago, 7.5, TI
-Media Geral: 5.833333333333333
-Total Aprovados: 0
-Total Reprovados: 0
